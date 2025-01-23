@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import VideoPlayer from './components/videoPlayer';
+import VideoPlayer from './components/VideoPlayer';
 
 const App = () => (
   <Router>
