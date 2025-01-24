@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import AdbIcon from '@mui/icons-material/Adb';
+import ViewInArIcon from '@mui/icons-material/ViewInAr';
 
 const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
 
 const Logo = () => (
   <>
-    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+    <ViewInArIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
     <Typography
       variant="h6"
       noWrap
