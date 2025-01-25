@@ -7,9 +7,9 @@ import ViewInArIcon from '@mui/icons-material/ViewInAr';
 
 const Navbar = () => {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar >
+      <Container>
+        <Toolbar >
           <Logo />
         </Toolbar>
       </Container>
@@ -19,7 +19,7 @@ const Navbar = () => {
 
 const Logo = () => (
   <>
-    <ViewInArIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+    <ViewInArIcon/>
     <Typography
       variant="h6"
       noWrap
