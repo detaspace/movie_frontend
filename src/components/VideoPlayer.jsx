@@ -87,7 +87,7 @@ const VideoPlayer = () => {
         sx={{
           position: 'relative',
           width: '95%',
-          maxWidth: '600px',
+          maxWidth: '610px',
           height: 'auto',
           borderRadius: '10px',
           overflow: 'hidden',
@@ -190,7 +190,7 @@ const VideoPlayer = () => {
                   textTransform: 'none',
                   borderRadius: '20px',
                   px: { xs: 2, sm: 3 }, // Adjust padding for smaller screens
-                  py: { xs: 1, sm: 1.5 },
+                  py: { xs: 0.5, sm: 1.5 },
                   fontSize: { xs: '12px', sm: '14px', md: '16px' }, // Adjust font size for responsiveness
                   '&:hover': {
                     borderColor: 'rgba(255, 255, 255, 0.7)',
