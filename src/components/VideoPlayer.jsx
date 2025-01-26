@@ -172,7 +172,7 @@ const VideoPlayer = () => {
                 '&:hover': {
                   backgroundColor: '#166ad6',
                 },
-                mb: { xs: 2, sm: 3 }, // Add margin below the button on smaller screens
+                // mb: { xs: 2, sm: 3 }, // Add margin below the button on smaller screens
               }}
             >
               {platform === 'android' ? 'View in App' : 'View in App'}
