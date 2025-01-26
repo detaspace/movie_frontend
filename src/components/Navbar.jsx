@@ -19,14 +19,15 @@ const Navbar = () => {
 
 const Logo = () => (
   <>
-    <ViewInArIcon/>
+    <ViewInArIcon />
     <Typography
       variant="h6"
       noWrap
       component="a"
       sx={{
         mr: 2,
-        display: { xs: 'none', md: 'flex' },
+        ml: 1,
+        display: 'flex', // Always display the text on all screen sizes
         fontFamily: 'monospace',
         fontWeight: 700,
         letterSpacing: '.3rem',
@@ -36,6 +37,7 @@ const Logo = () => (
     >
       Feradox
     </Typography>
+
   </>
 );
 
