@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.getitdone.boxapp",
+      "sha256_cert_fingerprints": [
+        "3E:95:3E:01:2F:A7:25:BC:99:D9:24:59:03:56:7C:68:A6:12:4C:9E:FA:CC:46:D3:B5:2F:29:C8:EB:CF:C2:65"
+      ]
+    }
+  }
+]
