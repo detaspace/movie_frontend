@@ -27,7 +27,6 @@ const VideoPlayer = () => {
         const response = await fetch(`https://movie-backend-wv9x.onrender.com/api/movies/${id}`);
         const data = await response.json();
         setUrl(data.videoUrl);
-        console.log(data);
       } catch (error) {
         console.error('Error fetching movie:', error);
       }
