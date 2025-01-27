@@ -131,7 +131,7 @@ const VideoPlayer = () => {
             }}
           >
             {/* Video Details */}
-            <Typography
+            {/* <Typography
               variant="h6"
               sx={{
                 fontSize: { xs: '14px', sm: '12px', md: '20px' }, // Adjust font size for different screen sizes
@@ -154,7 +154,7 @@ const VideoPlayer = () => {
               }}
             >
               Duration: 02:32:26 | Size: 570.5MB
-            </Typography>
+            </Typography> */}
 
             {/* View in App Button */}
             <Button
