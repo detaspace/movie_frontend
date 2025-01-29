@@ -11,6 +11,10 @@
     {
       "source": "/privacy",
       "destination": "/index.html"
+    },
+    {
+      "source": "/:username/:id",
+      "destination": "/index.html"
     }
   ]
 }
