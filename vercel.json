@@ -1,12 +1,16 @@
 {
-  "routes": [
-    {
-      "src": "/.well-known/assetlinks.json",
-      "dest": "/public/.well-known/assetlinks.json"
-    }
-  ],
   "rewrites": [
-    { "source": "/terms", "destination": "/index.html" },
-    { "source": "/privacy", "destination": "/index.html" }
+    {
+      "source": "/.well-known/assetlinks.json",
+      "destination": "/public/.well-known/assetlinks.json"
+    },
+    {
+      "source": "/terms",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/index.html"
+    }
   ]
 }
