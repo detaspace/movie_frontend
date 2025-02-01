@@ -13,6 +13,14 @@
       "destination": "/index.html"
     },
     {
+      "source": "/deleteData",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/deleteAccount",
+      "destination": "/index.html"
+    },
+    {
       "source": "/:username/:id",
       "destination": "/index.html"
     }
