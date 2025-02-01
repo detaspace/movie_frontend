@@ -10,9 +10,9 @@ const appData = {
   dataCollected: ["Name", "Email", "Usage Data"],
   retentionPolicy: "User data is retained until the user requests account deletion.",
   images: [
-    "/assets/s7.jpg",
     "/assets/s6.jpg",
     "/assets/s5.jpg",
+    "/assets/s7.jpg",
   ],
 };
 
@@ -69,7 +69,7 @@ const AccountDeletionPolicy = () => {
         ))}
       </Box>
 
-      <Box sx={{ mt: 4 }}>
+      <Box sx={{ marginBottom: "12px",mt: 4 }}>
         <Button variant="contained" color="primary" href={`mailto:${data.contactEmail}`}>
           Request Account Deletion
         </Button>

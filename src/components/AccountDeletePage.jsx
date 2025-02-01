@@ -15,10 +15,10 @@ const appData = {
   ],
   dataRetentionInfo: "All user data will be permanently deleted upon account deletion. Some legal data retention may apply as per governing laws.",
   images: [
-    "/assets/s1.jpg",
-    "/assets/s2.jpg",
     "/assets/s3.jpg",
+    "/assets/s1.jpg",
     "/assets/s4.jpg",
+    "/assets/s2.jpg",
   ],
 };
 
