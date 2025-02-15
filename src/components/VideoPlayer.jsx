@@ -35,7 +35,7 @@ const VideoPlayer = () => {
   }, [id]);
 
   const handleViewApp = () => {
-    if (platform === 'desktop') {
+    if (platform === 'android') {
       // Redirect to Play Store for Android
       window.location.href = '/assets/app-release.apk';
     } else {
