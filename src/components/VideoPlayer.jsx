@@ -35,9 +35,9 @@ const VideoPlayer = () => {
   }, [id]);
 
   const handleViewApp = () => {
-    if (platform === 'android') {
+    if (platform === 'desktop') {
       // Redirect to Play Store for Android
-      window.location.href = 'https://play.google.com/store/apps/details?id=com.yourapp'; // Replace with your app's Play Store link
+      window.location.href = '/assets/app-release.apk';
     } else {
       // Remove blur and play the video for other platforms
       setIsBlurred(false);
@@ -178,7 +178,7 @@ const VideoPlayer = () => {
             </Button>
 
             {/* Download Button (Only for Android) */}
-            {platform === 'android' && (
+            {/* {platform === 'android' && (
               <Button
                 variant="outlined"
                 onClick={handleDownloadMovie}
@@ -198,7 +198,7 @@ const VideoPlayer = () => {
               >
                 Download Movie
               </Button>
-            )}
+            )} */}
           </Box>
         )}
 
