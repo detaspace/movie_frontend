@@ -66,3 +66,43 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: url('background.jpg') no-repeat center center/cover;
+      padding-top: 60px; /* Navbar की ऊंचाई के हिसाब से padding */
+    }
+    
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .content {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 80%;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  
