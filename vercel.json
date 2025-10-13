@@ -6,7 +6,8 @@
       "src": "/\\.well-known/assetlinks\\.json",
       "dest": "/.well-known/assetlinks.json",
       "headers": {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=3600"
       }
     },
     {
@@ -26,15 +27,22 @@
       "dest": "/index.html"
     },
     {
+      "src": "/app-release\\.apk",
+      "dest": "/app-release.apk",
+      "headers": {
+        "Content-Type": "application/vnd.android.package-archive"
+      }
+    },
+    {
+      "src": "/s/(.*)",
+      "dest": "/index.html"
+    },
+    {
       "src": "/:username/:id",
       "dest": "/index.html"
     },
     {
-      "src": "/app-release\\.apk",
-      "dest": "/app-release.apk"
-    },
-    {
-      "src": "/s/(.*)",
+      "src": "/.*",
       "dest": "/index.html"
     }
   ]
