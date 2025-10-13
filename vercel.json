@@ -1,32 +1,41 @@
 {
-  "rewrites": [
+  "version": 2,
+  "public": true,
+  "routes": [
     {
-      "source": "/.well-known/assetlinks.json",
-      "destination": "/public/.well-known/assetlinks.json"
+      "src": "/\\.well-known/assetlinks\\.json",
+      "dest": "/.well-known/assetlinks.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     },
     {
-      "source": "/terms",
-      "destination": "/index.html"
+      "src": "/terms",
+      "dest": "/index.html"
     },
     {
-      "source": "/privacy",
-      "destination": "/index.html"
+      "src": "/privacy",
+      "dest": "/index.html"
     },
     {
-      "source": "/deleteData",
-      "destination": "/index.html"
+      "src": "/deleteData",
+      "dest": "/index.html"
     },
     {
-      "source": "/deleteAccount",
-      "destination": "/index.html"
+      "src": "/deleteAccount",
+      "dest": "/index.html"
     },
     {
-      "source": "/:username/:id",
-      "destination": "/index.html"
+      "src": "/:username/:id",
+      "dest": "/index.html"
     },
     {
-      "source": "/app-release.apk",
-      "destination": "/app-release.apk"
+      "src": "/app-release\\.apk",
+      "dest": "/app-release.apk"
+    },
+    {
+      "src": "/s/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
