@@ -2,7 +2,7 @@
   "version": 2,
   "public": true,
   "routes": [
-    // 1. Android App Links के लिए सही Content-Type: application/json सुनिश्चित करता है।
+    // 1. Android App Links के लिए Content-Type
     {
       "src": "/\\.well-known/assetlinks\\.json",
       "dest": "/.well-known/assetlinks.json",
@@ -12,7 +12,7 @@
       }
     },
     
-    // 2. iOS Universal Links के लिए सही Content-Type: application/json सुनिश्चित करता है।
+    // 2. iOS Universal Links के लिए Content-Type
     {
       "src": "/\\.well-known/apple-app-site-association",
       "dest": "/.well-known/apple-app-site-association",
@@ -22,46 +22,17 @@
       }
     },
     
-    // 3. डीप लिंक हैंडलर: feradox.com/s/ (यह सुनिश्चित करता है कि लिंक index.html पर जाएँ)
+    // 3. डीप लिंक/कस्टम लिंक्स को index.html पर रूट करें
     {
       "src": "/s/(.*)",
       "dest": "/index.html"
     },
-    
-    // 4. कस्टम/यूजर लिंक्स: /:username/:id
     {
       "src": "/:username/:id",
       "dest": "/index.html"
     },
     
-    // 5. स्टैटिक पेज लिंक्स
-    {
-      "src": "/terms",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/privacy",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/deleteData",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/deleteAccount",
-      "dest": "/index.html"
-    },
-    
-    // 6. APK डाउनलोड MIME टाइप
-    {
-      "src": "/app-release\\.apk",
-      "dest": "/app-release.apk",
-      "headers": {
-        "Content-Type": "application/vnd.android.package-archive"
-      }
-    },
-    
-    // 7. डिफ़ॉल्ट/Fallback रूट
+    // 4. Fallback (सभी को index.html पर भेजें)
     {
       "src": "/.*",
       "dest": "/index.html"
