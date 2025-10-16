@@ -2,12 +2,25 @@
   "version": 2,
   "public": true,
   "routes": [
-   
-    { "src": "/s/(.*)", "dest": "/index.html" },
-    
-   
-    { "src": "/:username/:id", "dest": "/index.html" },
-    
-    { "src": "/.*", "dest": "/index.html" }
+    {
+      "src": "/\\.well-known/assetlinks\\.json",
+      "dest": "/.well-known/assetlinks.json",
+      "headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/s/(.*)",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/:username/:id",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
   ]
 }
