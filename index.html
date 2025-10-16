@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>FlixPlay</title>
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <base href="/">
+    <!-- ✅ App Icon -->
+    <link rel="icon" href="icons/Icon-192.png" type="image/png" />
 
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="icon" type="image/png" href="favicon.png"/>
-</head>
-<body>
+    <!-- ✅ Flutter Web Loader -->
     <script>
-        // यह स्क्रिप्ट Flutter को शुरू होने तक एक साधारण लोडिंग स्क्रीन दिखाती है।
-        var serviceWorkerVersion = 'आपका वर्जन यहाँ होगा';
+      // यह script Flutter web app को initialize करेगा
+      window.addEventListener('load', function (ev) {
+        // Flutter loader.js को dynamically लोड करना
+        var script = document.createElement('script');
+        script.src = 'flutter.js';
+        document.body.appendChild(script);
+      });
     </script>
 
-    <script src="flutter.js" defer></script>
-</body>
+    <style>
+      /* Simple dark splash style */
+      body {
+        margin: 0;
+        background: #000;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .loader {
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        border-top: 5px solid #ff2c2c;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="loader"></div>
+    <p>🚀 Loading FlixPlay...</p>
+  </body>
 </html>
