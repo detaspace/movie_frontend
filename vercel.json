@@ -2,31 +2,15 @@
   "version": 2,
   "public": true,
   "routes": [
-    // 1. Android App Links के लिए Content-Type
-    {
-      "src": "/\\.well-known/assetlinks\\.json",
-      "dest": "/.well-known/assetlinks.json",
-      "headers": {
-        "Content-Type": "application/json",
-        "Cache-Control": "public, max-age=3600"
-      }
-    },
+    // 1. **हटा दिया गया:** Android और iOS फ़ाइलों के लिए कस्टम हेडर राउटिंग
     
-    // 2. iOS Universal Links के लिए Content-Type
-    {
-      "src": "/\\.well-known/apple-app-site-association",
-      "dest": "/.well-known/apple-app-site-association",
-      "headers": {
-        "Content-Type": "application/json",
-        "Cache-Control": "public, max-age=3600"
-      }
-    },
-    
-    // 3. डीप लिंक/कस्टम लिंक्स को index.html पर रूट करें
+    // 2. डीप लिंक हैंडलर: feradox.com/s/ को index.html पर रूट करें
     {
       "src": "/s/(.*)",
       "dest": "/index.html"
     },
+    
+    // 3. कस्टम/यूजर लिंक्स: /:username/:id को index.html पर रूट करें
     {
       "src": "/:username/:id",
       "dest": "/index.html"
