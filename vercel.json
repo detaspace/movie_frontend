@@ -2,15 +2,15 @@
   "version": 2,
   "public": true,
   "routes": [
-    // Deep Link URL /s/(.*) को index.html पर रूट करें
-    {
-      "src": "/s/(.*)",
-      "dest": "/index.html"
-    },
-    // Fallback: सभी अन्य URLs को index.html पर भेजें
-    {
-      "src": "/.*",
-      "dest": "/index.html"
-    }
+    // 1. **सबसे विशिष्ट: डीप लिंक रूट**
+    { "src": "/s/(.*)", "dest": "/index.html" },
+    
+    // 2. **दूसरा विशिष्ट रूट**
+    { "src": "/:username/:id", "dest": "/index.html" },
+    
+    // 3. **.well-known राउटिंग की आवश्यकता नहीं है** - Vercel को फ़ाइलें अपने आप सर्व करनी चाहिए।
+    
+    // 4. **सबसे सामान्य/फॉलबैक**
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
