@@ -2,6 +2,7 @@
   "version": 2,
   "public": true,
   "routes": [
+    // 1. 🤖 Android App Links: assetlinks.json के लिए Content-Type हेडर सुनिश्चित करता है।
     {
       "src": "/\\.well-known/assetlinks\\.json",
       "dest": "/.well-known/assetlinks.json",
@@ -10,6 +11,31 @@
         "Cache-Control": "public, max-age=3600"
       }
     },
+    
+    // 2. 🍎 iOS Universal Links: apple-app-site-association के लिए Content-Type हेडर सुनिश्चित करता है।
+    {
+      "src": "/\\.well-known/apple-app-site-association",
+      "dest": "/.well-known/apple-app-site-association",
+      "headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    
+    // 3. 🔗 Deep Link Handler: feradox.com/s/ (आपके ऐप का कंटेंट)
+    // यह डीप लिंक राउटिंग को सबसे पहले हैंडल करता है।
+    {
+      "src": "/s/(.*)",
+      "dest": "/index.html"
+    },
+    
+    // 4. User/Custom Links: /:username/:id जैसे किसी भी अन्य विशिष्ट लिंक को हैंडल करें।
+    {
+      "src": "/:username/:id",
+      "dest": "/index.html"
+    },
+    
+    // 5. Terms/Privacy Pages: सामान्य स्टैटिक पेज
     {
       "src": "/terms",
       "dest": "/index.html"
@@ -26,6 +52,8 @@
       "src": "/deleteAccount",
       "dest": "/index.html"
     },
+    
+    // 6. APK Download: APK फ़ाइल के लिए सही MIME Type
     {
       "src": "/app-release\\.apk",
       "dest": "/app-release.apk",
@@ -33,14 +61,8 @@
         "Content-Type": "application/vnd.android.package-archive"
       }
     },
-    {
-      "src": "/s/(.*)",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/:username/:id",
-      "dest": "/index.html"
-    },
+    
+    // 7. Fallback: किसी भी चीज़ के लिए डिफ़ॉल्ट रूट (सबसे अंत में)
     {
       "src": "/.*",
       "dest": "/index.html"
