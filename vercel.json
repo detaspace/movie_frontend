@@ -1,14 +1,9 @@
 {
   "version": 2,
+  "public": true,
   "routes": [
-    {
-      "src": "/s/(.*)",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
-    }
+    { "src": "/s/(.*)", "dest": "/index.html" },
+    { "src": "/.*", "dest": "/index.html" }
   ],
   "headers": [
     {
