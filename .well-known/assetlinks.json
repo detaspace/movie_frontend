@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.new_flix_link",
+    "sha256_cert_fingerprints": [
+      "3D:C2:43:83:C4:A3:69:44:86:60:22:52:39:EA:E8:75:A6:79:5F:60:4A:49:9C:34:1D:EE:2B:FE:34:18:EF:B1"
+    ]
+  }
+}]
